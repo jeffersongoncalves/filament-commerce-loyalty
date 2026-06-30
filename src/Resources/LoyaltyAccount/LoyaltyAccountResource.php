@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Loyalty\Resources\LoyaltyAccount;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Loyalty\Models\LoyaltyAccount;
 use JeffersonGoncalves\FilamentCommerce\Loyalty\CommerceLoyaltyPlugin;
@@ -26,9 +26,9 @@ class LoyaltyAccountResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return LoyaltyAccountForm::configure($schema);
+        return LoyaltyAccountForm::configure($form);
     }
 
     public static function table(Table $table): Table
